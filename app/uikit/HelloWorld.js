@@ -1,19 +1,25 @@
-import React, { Component, PropTypes } from 'react';
-import { View, Text, Platform } from 'react-primitives';
+import React, { Component } from 'react';
+import { Platform } from 'react-native';
+import { View, Text } from '../uikit/Primitive';
 
 const IS_WEB = Platform.OS === 'web';
 
 const styles = {
-  myText: {
+  textWrapper: IS_WEB ? {
     textAlign: 'center',
-    color: IS_WEB ? 'black' : 'red',
+  } : {},
+  myText: IS_WEB ? {
+    color:'black',
+  } : {
+    textAlign: 'center',
+    color:'red',
   },
 };
 
 export default class HelloWorld extends Component {
   render() {
     return (
-      <View>
+      <View style={styles.textWrapper}>
         <Text style={styles.myText}>
           Hey this is Amazing
         </Text>

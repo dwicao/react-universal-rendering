@@ -1,22 +1,42 @@
 import React, { Component } from 'react';
-import { View, Text, Platform } from 'react-primitives';
+import { Platform } from 'react-native';
+import { View, Text, Button } from '../uikit/Primitive';
 
 const IS_WEB = Platform.OS === 'web';
 
 const styles = {
-  myText: {
+  textWrapper: IS_WEB ? {
     textAlign: 'center',
-    color: IS_WEB ? 'red' : 'black',
+  } : {},
+  myText: IS_WEB ? {
+    color:'red',
+  } : {
+    textAlign: 'center',
+    color:'black',
+  },
+  button: IS_WEB ? {
+    backgroundColor: '#eee',
+  } : {
+    backgroundColor: '#eee',
   },
 };
 
 export default class Header extends Component {
+  onClick() {
+    alert('amazing');
+  }
+
   render() {
     return (
-      <View>
-        <Text style={styles.myText}>
-          {this.props.title}
-        </Text>
+      <View style={styles.textWrapper}>
+        <Button
+          style={styles.button}
+          onClick={() => this.onClick()}
+        >
+          <Text style={styles.myText}>
+            {this.props.title}
+          </Text>
+        </Button>
       </View>
     );
   }

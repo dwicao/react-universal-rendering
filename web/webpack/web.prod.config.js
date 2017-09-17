@@ -26,6 +26,11 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    alias: {
+        "react-native": "react-native-web",
+    },
+  },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {

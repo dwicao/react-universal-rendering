@@ -1,5 +1,6 @@
-import React, { Component, PropTypes } from 'react';
-import { View, Platform } from 'react-primitives';
+import React, { Component } from 'react';
+import { Platform } from 'react-native';
+import { View } from '../uikit/Primitive';
 
 import Header     from '../uikit/Header';
 import HelloWorld from '../uikit/HelloWorld';
