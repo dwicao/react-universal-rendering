@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
 import NativeContainers from './app/native/containers';
 
-class ReactNativeHelloWorld extends Component {
+class ReactUniversalRendering extends Component {
   render() {
     return (
       <NativeContainers />
@@ -10,4 +10,4 @@ class ReactNativeHelloWorld extends Component {
   }
 }
 
-AppRegistry.registerComponent('ReactNativeWebHelloWorld', () => ReactNativeHelloWorld);
+AppRegistry.registerComponent('ReactUniversalRendering', () => ReactUniversalRendering);
