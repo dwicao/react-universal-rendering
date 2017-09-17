@@ -26,7 +26,6 @@
   "babel-preset-react": "^6.24.1",
   "babel-preset-react-native": "4.0.0",
   "json-loader": "^0.5.7",
-  "react-native-web": "^0.0.125",
   "react-transform-hmr": "^1.0.4",
   "webpack": "^3.6.0",
   "webpack-dev-server": "^2.8.2",

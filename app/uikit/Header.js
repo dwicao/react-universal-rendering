@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Platform } from 'react-native';
-import { View, Text, Button } from '../uikit/Primitive';
+import { View, Text, Button, Platform } from '../uikit/Primitive';
 
 const IS_WEB = Platform.OS === 'web';
 

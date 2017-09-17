@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Platform} from 'react-native';
+import Platform from './Platform';
 
 const IS_WEB = Platform.OS === 'web';
 
@@ -72,4 +72,5 @@ module.exports = {
   View: ViewPrimitive,
   Text: TextPrimitive,
   Button: ButtonPrimitive,
+  Platform,
 };

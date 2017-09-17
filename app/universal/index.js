@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Platform } from 'react-native';
-import { View } from '../uikit/Primitive';
+import { View, Platform } from '../uikit/Primitive';
 
 import Header     from '../uikit/Header';
 import HelloWorld from '../uikit/HelloWorld';
