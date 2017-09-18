@@ -35,7 +35,7 @@ class TextPrimitive extends Component {
     const {
       style,
       children,
-      ...restProps
+      ...otherProps
     } = this.props;
 
     const defaultStyle = IS_WEB ? {
@@ -47,13 +47,13 @@ class TextPrimitive extends Component {
       return (
         <span
           style={{...defaultStyle, ...style}}
-          {...restProps}>
+          {...otherProps}>
             {children}
         </span>
       );
     } else {
       return (
-        <Text style={style} {...restProps}>
+        <Text style={style} {...otherProps}>
           {children}
         </Text>
       );
