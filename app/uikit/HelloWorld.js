@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
-import { View, Text, Platform } from '../uikit/Primitive';
+import { View, Text, Platform, Br } from '../uikit/Primitive';
 
 const IS_WEB = Platform.OS === 'web';
 
 const styles = {
   textWrapper: IS_WEB ? {
+    marginTop: 10,
     textAlign: 'center',
-  } : {},
+  } : {
+    marginTop: 10,
+  },
   myText: IS_WEB ? {
-    color:'black',
+    color: 'black',
+    fontSize: 20,
   } : {
     textAlign: 'center',
-    color:'red',
+    color: 'black',
+    fontSize: 20,
   },
 };
 
@@ -20,7 +25,9 @@ export default class HelloWorld extends Component {
     return (
       <View style={styles.textWrapper}>
         <Text style={styles.myText}>
-          Hey this is Amazing
+          Single codebase<Br/>
+          Web, Android, and iOS<Br/>
+          using React
         </Text>
       </View>
     );
