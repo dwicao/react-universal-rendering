@@ -32,16 +32,29 @@ class ViewPrimitive extends Component {
 
 class TextPrimitive extends Component {
   render() {
+    const {
+      style,
+      children,
+      ...restProps
+    } = this.props;
+
+    const defaultStyle = IS_WEB ? {
+      fontFamily: 'system-ui',
+      fontWeight: 300,
+    } : {};
+
     if (IS_WEB) {
       return (
-        <span {...this.props}>
-          {this.props.children}
+        <span
+          style={{...defaultStyle, ...style}}
+          {...restProps}>
+            {children}
         </span>
       );
     } else {
       return (
-        <Text {...this.props}>
-          {this.props.children}
+        <Text style={style} {...restProps}>
+          {children}
         </Text>
       );
     }
@@ -59,16 +72,16 @@ class ButtonPrimitive extends Component {
     if (IS_WEB) {
       return (
         <button
-          {...otherProps}
-          onClick={onPress}>
+          onClick={onPress}
+          {...otherProps}>
             {children}
         </button>
       );
     } else {
       return (
         <TouchableOpacity
-          {...otherProps}
-          onPress={onPress}>
+          onPress={onPress}
+          {...otherProps}>
             {children}
         </TouchableOpacity>
       );
@@ -87,15 +100,15 @@ class ImagePrimitive extends Component {
     if (IS_WEB) {
       return (
         <img
-          {...otherProps}
-          src={source}/>
+          src={source}
+          {...otherProps}/>
       );
     } else {
       return (
         <Image
-          {...otherProps}
           source={source}
-          resizeMode={resizeMode || 'contain'}/>
+          resizeMode={resizeMode || 'contain'}
+          {...otherProps}/>
       );
     }
   }
@@ -104,13 +117,9 @@ class ImagePrimitive extends Component {
 class BrPrimitive extends Component {
   render() {
     if (IS_WEB) {
-      return (
-        <br/>
-      );
+      return <br/>;
     } else {
-      return (
-        <Text>{'\n'}</Text>
-      );
+      return <Text>{'\n'}</Text>;
     }
   }
 }
