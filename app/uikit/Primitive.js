@@ -97,6 +97,23 @@ class ViewPrimitive extends Component {
 class TextPrimitive extends Component {
   render() {
     const {
+      accessible,
+      allowFontScaling,
+      ellipsizeMode,
+      nativeID,
+      numberOfLines,
+      onLayout,
+      onLongPress,
+      onPress,
+      pressRetentionOffset,
+      selectable,
+      testID,
+      disabled,
+      selectionColor,
+      textBreakStrategy,
+      adjustsFontSizeToFit,
+      minimumFontScale,
+      suppressHighlighting,
       style,
       children,
       ...otherProps
@@ -117,8 +134,27 @@ class TextPrimitive extends Component {
       );
     } else {
       return (
-        <Text style={style} {...otherProps}>
-          {children}
+        <Text
+          accessible={accessible}
+          allowFontScaling={allowFontScaling}
+          ellipsizeMode={ellipsizeMode}
+          nativeID={nativeID}
+          numberOfLines={numberOfLines}
+          onLayout={onLayout}
+          onLongPress={onLongPress}
+          onPress={onPress}
+          pressRetentionOffset={pressRetentionOffset}
+          selectable={selectable}
+          testID={testID}
+          disabled={disabled}
+          selectionColor={selectionColor}
+          textBreakStrategy={textBreakStrategy}
+          adjustsFontSizeToFit={adjustsFontSizeToFit}
+          minimumFontScale={minimumFontScale}
+          suppressHighlighting={suppressHighlighting}
+          style={style}
+          {...otherProps}>
+            {children}
         </Text>
       );
     }
