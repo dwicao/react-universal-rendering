@@ -8,6 +8,7 @@ if (!IS_WEB) {
     View,
     Text,
     Image,
+    TextInput,
     TouchableOpacity,
   } = require('react-native');
 }
@@ -56,6 +57,30 @@ class TextPrimitive extends Component {
         <Text style={style} {...otherProps}>
           {children}
         </Text>
+      );
+    }
+  }
+}
+
+class TextInputPrimitive extends Component {
+  render() {
+    const {style, ...otherProps} = this.props;
+
+    const defaultStyle = IS_WEB ? {
+      outline: 'none',
+      border: 0,
+    } : {};
+
+    if (IS_WEB) {
+      return (
+        <input
+          type='text'
+          style={{...defaultStyle, ...style}}
+          {...otherProps}/>
+      );
+    } else {
+      return (
+        <TextInput style={style} {...otherProps}/>
       );
     }
   }
@@ -127,6 +152,7 @@ class BrPrimitive extends Component {
 module.exports = {
   View: ViewPrimitive,
   Text: TextPrimitive,
+  TextInput: TextInputPrimitive,
   Button: ButtonPrimitive,
   Image: ImagePrimitive,
   Br: BrPrimitive,

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Image, Platform } from '../uikit/Primitive';
+import { View, Image, Platform, TextInput } from '../uikit/Primitive';
 
 import Header     from '../uikit/Header';
 import HelloWorld from '../uikit/HelloWorld';
@@ -27,6 +27,16 @@ const styles = {
     margin: '0 auto',
   } : {
   },
+  myTextInputWrapper: IS_WEB ? {
+    marginTop: 10,
+  } : {
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  myTextInput: IS_WEB ? {
+    display: 'block',
+    margin: '0 auto',
+  } : {},
 }
 
 class Universal extends Component {
@@ -39,6 +49,9 @@ class Universal extends Component {
           <Image source={imgLogo} style={styles.imgLogo} height={100}/>
         </View>
         <Header title={this.props.title}/>
+        <View style={styles.myTextInputWrapper}>
+          <TextInput placeholder='This is text input...' style={styles.myTextInput}/>
+        </View>
         <HelloWorld color={IS_WEB ? 'red' : 'black'} />
       </View>
     );
