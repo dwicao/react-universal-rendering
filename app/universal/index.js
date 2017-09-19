@@ -10,9 +10,11 @@ const IS_WEB = Platform.OS === 'web';
 
 const styles = {
   app: IS_WEB ? {
-    marginTop: 100,
+    paddingTop: 100,
   } : {
-    marginTop: 100,
+    flex: 1,
+    backgroundColor: 'white',
+    paddingTop: 100,
   },
   imgLogoWrapper : IS_WEB ? {
     margin: '1rem',
