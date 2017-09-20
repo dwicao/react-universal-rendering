@@ -294,7 +294,6 @@ class ButtonPrimitive extends Component {
       hitSlop,
       onLayout,
       onLongPress,
-      onPress,
       onPressIn,
       onPressOut,
       pressRetentionOffset,
@@ -359,8 +358,6 @@ class ImagePrimitive extends Component {
       defaultSource,
       onPartialLoad,
       onProgress,
-      source,
-      resizeMode,
       ...otherProps
     } = this.props;
 

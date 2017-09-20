@@ -39,7 +39,7 @@ const styles = {
   } : {},
 }
 
-class Universal extends Component {
+class Main extends Component {
   render() {
     const { color } = this.props;
 
@@ -58,4 +58,4 @@ class Universal extends Component {
   }
 }
 
-export default Universal;
+export default Main;

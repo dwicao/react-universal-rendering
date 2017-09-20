@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Universal from '../../universal';
+import Main from '../../main';
 
 export default class WebContainers extends Component {
   render() {
     return (
-      <Universal title="react-universal-rendering on Web"/>
+      <Main title="react-universal-rendering on Web"/>
     );
   }
 }
