@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Image, Platform, TextInput } from '../uikit/Primitive';
+import { View, Image, Platform, TextInput } from '../primitive';
 
 import Header     from '../uikit/Header';
 import HelloWorld from '../uikit/HelloWorld';
