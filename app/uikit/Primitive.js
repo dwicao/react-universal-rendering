@@ -282,6 +282,22 @@ class TextInputPrimitive extends Component {
 class ButtonPrimitive extends Component {
   render() {
     const {
+      activeOpacity,
+      tvParallaxProperties,
+      accessibilityComponentType,
+      accessibilityTraits,
+      accessible,
+      delayLongPress,
+      delayPressIn,
+      delayPressOut,
+      disabled,
+      hitSlop,
+      onLayout,
+      onLongPress,
+      onPress,
+      onPressIn,
+      onPressOut,
+      pressRetentionOffset,
       onPress,
       children,
       ...otherProps
@@ -290,6 +306,7 @@ class ButtonPrimitive extends Component {
     if (IS_WEB) {
       return (
         <button
+          disabled={disabled}
           onClick={onPress}
           {...otherProps}>
             {children}
@@ -298,6 +315,22 @@ class ButtonPrimitive extends Component {
     } else {
       return (
         <TouchableOpacity
+          activeOpacity={activeOpacity}
+          tvParallaxProperties={tvParallaxProperties}
+          accessibilityComponentType={accessibilityComponentType}
+          accessibilityTraits={accessibilityTraits}
+          accessible={accessible}
+          delayLongPress={delayLongPress}
+          delayPressIn={delayPressIn}
+          delayPressOut={delayPressOut}
+          disabled={disabled}
+          hitSlop={hitSlop}
+          onLayout={onLayout}
+          onLongPress={onLongPress}
+          onPress={onPress}
+          onPressIn={onPressIn}
+          onPressOut={onPressOut}
+          pressRetentionOffset={pressRetentionOffset}
           onPress={onPress}
           {...otherProps}>
             {children}
