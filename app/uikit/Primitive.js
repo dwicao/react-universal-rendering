@@ -343,6 +343,22 @@ class ButtonPrimitive extends Component {
 class ImagePrimitive extends Component {
   render() {
     const {
+      blurRadius,
+      onError,
+      onLayout,
+      onLoad,
+      onLoadEnd,
+      onLoadStart,
+      resizeMode,
+      source,
+      testID,
+      resizeMethod,
+      accessibilityLabel,
+      accessible,
+      capInsets,
+      defaultSource,
+      onPartialLoad,
+      onProgress,
       source,
       resizeMode,
       ...otherProps
@@ -357,6 +373,22 @@ class ImagePrimitive extends Component {
     } else {
       return (
         <Image
+          blurRadius={blurRadius}
+          onError={onError}
+          onLayout={onLayout}
+          onLoad={onLoad}
+          onLoadEnd={onLoadEnd}
+          onLoadStart={onLoadStart}
+          resizeMode={resizeMode}
+          source={source}
+          testID={testID}
+          resizeMethod={resizeMethod}
+          accessibilityLabel={accessibilityLabel}
+          accessible={accessible}
+          capInsets={capInsets}
+          defaultSource={defaultSource}
+          onPartialLoad={onPartialLoad}
+          onProgress={onProgress}
           source={source}
           resizeMode={resizeMode || 'contain'}
           {...otherProps}/>
