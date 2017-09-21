@@ -15,10 +15,12 @@ video (old version) https://youtu.be/lRAfQ5UhapU
 
 ## run locally
 > $ `npm run web-dev`
+
 > go to `http://localhost:3001`
 
 ## prod bundle (web)
 > $ `npm run web-bundle`
+
 > dir: `react-universal-rendering/web/public`
 
 ## install react native CLI
