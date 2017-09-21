@@ -29,10 +29,12 @@ export default class ImagePrimitive extends Component {
       ...otherProps
     } = this.props;
 
+    const src = source && source.uri ? source.uri : source;
+
     if (IS_WEB) {
       return (
         <img
-          src={source}
+          src={src}
           {...otherProps}/>
       );
     } else {
@@ -45,7 +47,7 @@ export default class ImagePrimitive extends Component {
           onLoadEnd={onLoadEnd}
           onLoadStart={onLoadStart}
           resizeMode={resizeMode}
-          source={source}
+          source={src}
           testID={testID}
           resizeMethod={resizeMethod}
           accessibilityLabel={accessibilityLabel}
