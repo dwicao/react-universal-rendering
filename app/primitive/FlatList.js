@@ -12,6 +12,7 @@ export default class ViewPrimitive extends Component {
     const {
       data,
       renderItem,
+      keyExtractor,
       ...otherProps,
     } = this.props;
 
@@ -26,6 +27,7 @@ export default class ViewPrimitive extends Component {
         <FlatList
           data={data}
           renderItem={renderItem}
+          keyExtractor={keyExtractor}
           {...otherProps}/>
       );
     }
