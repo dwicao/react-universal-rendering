@@ -10,9 +10,30 @@ if (!IS_WEB) {
 export default class ViewPrimitive extends Component {
   render() {
     const {
+      ItemSeparatorComponent,
+      ListEmptyComponent,
+      ListFooterComponent,
+      ListHeaderComponent,
+      columnWrapperStyle,
       data,
-      renderItem,
+      extraData,
+      getItemLayout,
+      horizontal,
+      initialNumToRender,
+      initialScrollIndex,
+      inverted,
       keyExtractor,
+      legacyImplementation,
+      numColumns,
+      onEndReached,
+      onEndReachedThreshold,
+      onRefresh,
+      onViewableItemsChanged,
+      refreshing,
+      removeClippedSubviews,
+      renderItem,
+      viewabilityConfig,
+      progressViewOffset,
       ...otherProps,
     } = this.props;
 
@@ -25,9 +46,30 @@ export default class ViewPrimitive extends Component {
     } else {
       return (
         <FlatList
+          ItemSeparatorComponent={ItemSeparatorComponent}
+          ListEmptyComponent={ListEmptyComponent}
+          ListFooterComponent={ListFooterComponent}
+          ListHeaderComponent={ListHeaderComponent}
+          columnWrapperStyle={columnWrapperStyle}
           data={data}
-          renderItem={renderItem}
+          extraData={extraData}
+          getItemLayout={getItemLayout}
+          horizontal={horizontal}
+          initialNumToRender={initialNumToRender}
+          initialScrollIndex={initialScrollIndex}
+          inverted={inverted}
           keyExtractor={keyExtractor}
+          legacyImplementation={legacyImplementation}
+          numColumns={numColumns}
+          onEndReached={onEndReached}
+          onEndReachedThreshold={onEndReachedThreshold}
+          onRefresh={onRefresh}
+          onViewableItemsChanged={onViewableItemsChanged}
+          refreshing={refreshing}
+          removeClippedSubviews={removeClippedSubviews}
+          renderItem={renderItem}
+          viewabilityConfig={viewabilityConfig}
+          progressViewOffset={progressViewOffset}
           {...otherProps}/>
       );
     }
