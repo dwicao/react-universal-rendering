@@ -7,7 +7,7 @@ if (!IS_WEB) {
   var {FlatList} = require('react-native');
 }
 
-export default class ViewPrimitive extends Component {
+export default class FlatListPrimitive extends Component {
   render() {
     const {
       ItemSeparatorComponent,
