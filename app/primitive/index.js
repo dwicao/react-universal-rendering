@@ -1,5 +1,6 @@
 export { default as Br } from './Br';
 export { default as Button } from './Button';
+export { default as FlatList } from './FlatList';
 export { default as Image } from './Image';
 export { default as Text } from './Text';
 export { default as Platform } from './Platform';
