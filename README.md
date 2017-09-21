@@ -6,6 +6,18 @@ Single codebase for Web, Android, and iOS using React
 
 video (old version) https://youtu.be/lRAfQ5UhapU
 
+## Primitive Component:
+* Br
+* Button
+* FlatList
+* Image
+* Platform
+* Text
+* TextInput
+* View
+
+## Example project
+
 <img width="600" src="https://image.ibb.co/i8iFjQ/zzzz.png"/>
 
 ## copy to your machine
