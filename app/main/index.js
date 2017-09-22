@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import { View, Image, Platform, TextInput, FlatList, Text } from '../primitive';
 
-import Header     from '../uikit/Header';
-import HelloWorld from '../uikit/HelloWorld';
-
-import imgLogo from '../images/logo.png';
-
 const IS_WEB = Platform.OS === 'web';
 
 const styles = {

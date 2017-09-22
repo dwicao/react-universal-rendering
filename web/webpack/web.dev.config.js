@@ -6,6 +6,7 @@ module.exports = {
   entry: [
     'webpack-hot-middleware/client',
     'babel-polyfill',
+    'whatwg-fetch',
     path.join(__dirname, '../../app/web/index'),
   ],
   output: {
@@ -49,7 +50,6 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react', 'stage-0'],
